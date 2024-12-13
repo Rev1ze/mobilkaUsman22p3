@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ProductActivity"
+    android:background="@drawable/background_to_product"
+    android:orientation="vertical"
+
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        style="@style/editText"
+        android:layout_gravity="center"
+        android:text="1"/>
+
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:id="@+id/image"
+        android:src="@drawable/lemana_pro_basic_no_back"
+        />
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Цена: "
+        android:layout_marginStart="10dp"
+        style="@style/editText"
+        android:textSize="30dp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            style="@style/button"
+            android:layout_gravity="center"
+            android:text="В корзину"/>
+
+
+</LinearLayout>

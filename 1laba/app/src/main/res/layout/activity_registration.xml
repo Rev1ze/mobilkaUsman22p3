@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/black2"
+    tools:context=".Registration">
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_gravity="center"
+
+        android:src="@drawable/lemana_pro_basic_no_back"
+        android:layout_height="150dp"
+        >
+
+    </ImageView>
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Регистрация"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etFullName"
+        android:layout_width="700px"
+        style="@style/editText"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:hint="Введите полное имя"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/etBirthDate"
+        android:layout_width="700px"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        style="@style/editText"
+        android:hint="Выберите дату рождения"
+        android:focusable="false"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="700px"
+        style="@style/editText"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:hint="Введите почту"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="700px"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        style="@style/editText"
+        android:layout_marginEnd="32dp"
+        android:hint="Введите пароль"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:onClick="registerClicked"
+        android:layout_width="700px"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        style="@style/button"
+        android:text="Зарегистрироваться" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:onClick="backClicked"
+        android:layout_width="700px"
+        style="@style/button"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Назад" />
+
+</LinearLayout>

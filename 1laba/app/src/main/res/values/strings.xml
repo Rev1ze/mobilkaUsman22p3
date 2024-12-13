@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">1laba</string>
+    <string name="login">Введите логин и пароль</string>
+    <string name="log">Логин</string>
+    <string name="pass">Пароль</string>
+    <string name="voiti">Войти</string>
+</resources>
