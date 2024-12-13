@@ -1,0 +1,22 @@
+[
+  {
+    "Id": 100,
+    "UserName": "MisterSazhod",
+    "Password": "papamama",
+    "Name": "Sazhod",
+    "Surname": "Kaumov",
+    "MidName": "Akramchonovich",
+    "Email": "wqert@gmail.com",
+    "Birthday": "2000-07-07T00:00:00"
+  },
+  {
+    "Birthday": "1955-07-15T00:00:00",
+    "Email": "asd@asd.ru",
+    "Id": 101,
+    "MidName": "asd",
+    "Name": "asd",
+    "Password": "asdasd",
+    "Surname": "asd",
+    "UserName": "asd"
+  }
+]

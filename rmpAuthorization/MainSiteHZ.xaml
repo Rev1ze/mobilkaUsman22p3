@@ -1,0 +1,103 @@
+﻿<ui:FluentWindow x:Class="rmpAuthorization.MainSiteHZ"
+        xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:rmpAuthorization"
+        mc:Ignorable="d"
+        Title="MainSiteHZ" Height="600" Width="800">
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <LinearGradientBrush.RelativeTransform>
+                    <TransformGroup>
+                        <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                        <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                        <RotateTransform Angle="243.55800000000002" CenterX="0.5" CenterY="0.5"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </LinearGradientBrush.RelativeTransform>
+                <GradientStop Color="#FFE41DFC"/>
+                <GradientStop Color="#FFF78F13" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+
+        <ui:TitleBar Title="Главное меню" Grid.Row="0"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="1">
+            <ui:TextBlock Text="Добавление товара" VerticalAlignment="Center"/>
+            <TextBlock Width="15"/>
+
+            <StackPanel>
+                <ui:TextBlock Text="Название"/>
+                <ui:TextBox MinWidth="50" x:Name="textBoxName" MaxLength="50" MaxWidth="150"  Foreground="Black"/>
+            </StackPanel>
+            <TextBlock Width="10"/>
+            <StackPanel>
+                <ui:TextBlock Text="Цена"/>
+                <ui:NumberBox MinWidth="150" Minimum="1" x:Name="textBoxPrice" PreviewTextInput="NumberBox_PreviewTextInput"  MaxWidth="200" MaxLength="15" Background="White" Foreground="Black"/>
+            </StackPanel>
+            <TextBlock Width="10"/>
+            <StackPanel>
+                <ui:TextBlock Text="Категория"/>
+                <ComboBox MinWidth="100" x:Name="comboBoxCategory" Background="White" Foreground="Black"/>
+            </StackPanel>
+            <TextBlock Width="10" />
+            <ui:Button Content="Добавить товар" Click="add_product_Click" HorizontalAlignment="Center" Background="White" Foreground="Black"/>
+        </StackPanel>
+        <ScrollViewer HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Disabled" Grid.Row="2">
+            <StackPanel SizeChanged="stackPanelProducts_SizeChanged" x:Name="stackPanelProducts" Orientation="Horizontal">
+
+            </StackPanel>
+        </ScrollViewer>
+        <StackPanel Grid.Row="3" Orientation="Horizontal">
+            <ui:TextBlock FontSize="15" Text="Сортировка" VerticalAlignment="Center"/>
+            <TextBlock Width="15"/>
+            <ComboBox x:Name="comboBoxSorting" SelectionChanged="comboBoxSorting_SelectionChanged" Background="White" Foreground="Black"/>
+            <TextBlock Width="15"/>
+            <ui:TextBlock Text="Поиск" FontSize="15" VerticalAlignment="Center"/>
+            <TextBlock Width="15"/>
+            <ui:TextBox x:Name="textBoxFind" MinWidth="100" Background="White" Foreground="Black"/>
+            <TextBlock Width="15"/>
+            <ui:Button Content="Найти" Click="FindButton_Click" Background="White" Foreground="Black"/>
+            <Label Width="15"/>
+            <ui:Button Content="Вернуть исходные данные" HorizontalAlignment="Right" Click="BackBaseData_Click" Background="White" Foreground="Black"/>
+        </StackPanel>
+
+
+        <StackPanel Orientation="Horizontal" Grid.Row="4">
+            <ui:TextBlock FontSize="15" Width="95" Text="Фильтрация" VerticalAlignment="Center"/>
+            <ComboBox x:Name="comboBoxFiltration" SelectionChanged="comboBoxFiltration_SelectionChanged"/>
+            <TextBlock Width="15"/>
+            <ui:TextBlock Text="От" VerticalAlignment="Center" FontSize="15"/>
+            <TextBlock Width="15"/>
+
+            <ui:NumberBox PreviewTextInput="NumberBox_PreviewTextInput" x:Name="textBoxFiltration1"/>
+            <TextBlock Width="15"/>
+
+            <ui:TextBlock Text="До" VerticalAlignment="Center" FontSize="15"/>
+            <TextBlock Width="15"/>
+
+            <ui:NumberBox PreviewTextInput="NumberBox_PreviewTextInput" x:Name="textBoxFiltration2"/>
+            <TextBlock Width="15"/>
+            <ui:Button Content="Фильтровать" Click="Filtration_button_Click"/>
+
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5">
+            <Button Content="Все профили" Click="All_Profiles_Click"/>
+            <TextBlock Width="15"/>
+            <Button Content="Личный кабинет" Click="Lichka_Click"/>
+            <TextBlock Width="15"/>
+            <Button Content="Выход" Click="Button_Click"/>
+        </StackPanel>
+    </Grid>
+</ui:FluentWindow>

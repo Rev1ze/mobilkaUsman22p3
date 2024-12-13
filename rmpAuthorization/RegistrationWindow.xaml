@@ -1,0 +1,70 @@
+﻿<ui:FluentWindow x:Class="rmpAuthorization.RegistrationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+        xmlns:local="clr-namespace:rmpAuthorization"
+        mc:Ignorable="d"
+                 WindowStartupLocation="CenterScreen"
+                 
+        Title="Регистрация" Height="617" Width="575" MinWidth="381" MaxHeight="617" MinHeight="617" >
+    <Window.Resources>
+        <Style TargetType="Label">
+            <Setter Property="Foreground" Value="Black"/>
+        </Style>
+    </Window.Resources>
+    <Grid Margin="0,0,0,-6">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <LinearGradientBrush.RelativeTransform>
+                    <TransformGroup>
+                        <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                        <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                        <RotateTransform Angle="243.55800000000002" CenterX="0.5" CenterY="0.5"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </LinearGradientBrush.RelativeTransform>
+                <GradientStop Color="#FFE41DFC"/>
+                <GradientStop Color="#FFF78F13" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="35*"/>
+        </Grid.RowDefinitions>
+        <ui:TitleBar Foreground="Black" Title="Регистрация" CanMaximize="True" Grid.Row="0"/>
+        <StackPanel Margin="5,0,257,0" Grid.Row="1">
+
+            <Label Content="Электронная почта" />
+            <ui:TextBox x:Name="tboxGmail"  CommandManager.PreviewCanExecute="tboxName_PreviewCanExecute" PreviewTextInput="tboxGmail_PreviewTextInput" MaxLength="50" BorderBrush="Black" TextWrapping="NoWrap"/>
+            <Label Content="Логин"/>
+            <ui:TextBox x:Name="tboxLogin"  CommandManager.PreviewCanExecute="tboxName_PreviewCanExecute" BorderBrush="Black" MaxLength="50" />
+
+            <Label Content="Пароль"/>
+            <ui:PasswordBox x:Name="tboxPassword"  CommandManager.PreviewCanExecute="tboxName_PreviewCanExecute" BorderBrush="Black" MaxLength="50" />
+
+            <Label Content="Потвердите пароль"/>
+            <ui:PasswordBox x:Name="tboxPasswordConfirm"  CommandManager.PreviewCanExecute="tboxName_PreviewCanExecute" MaxLength="50"  BorderBrush="Black"/>
+            
+            <Label Content="Имя"/>
+            <ui:TextBox x:Name="tboxName" BorderBrush="Black" MaxLength="50"  CommandManager.PreviewCanExecute="tboxName_PreviewCanExecute" ContextMenu="{x:Null}" TextChanged="tboxName_TextChanged" PreviewTextInput="previewTextInput"/>
+            <Label Content="Фамилия"/>
+            <ui:TextBox x:Name="tboxSurname" BorderBrush="Black" MaxLength="50"  CommandManager.PreviewCanExecute="tboxName_PreviewCanExecute"  PreviewTextInput="previewTextInput"/>
+
+            <Label Content="Отчество (если есть)"/>
+            <ui:TextBox x:Name="tboxMidName" MaxLength="50"   PreviewTextInput="previewTextInput" CommandManager.PreviewCanExecute="tboxName_PreviewCanExecute" BorderBrush="Black"/>
+
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Label Content="Дата рождения"/>
+                <ui:CalendarDatePicker x:Name="calendar" BorderBrush="Black" VerticalAlignment="Center" HorizontalAlignment="Center" Width="90"/>
+            </StackPanel>
+            <StackPanel></StackPanel>
+            <ui:Button Content="Зарегистрироваться"     BorderBrush="Black" Foreground="Black" HorizontalAlignment="Center" Width="180" Click="registrationClick"/>
+            <Label></Label>
+            <ui:Button Content="Обратно к авторизации" Foreground="Black" BorderBrush="Black" HorizontalAlignment="Center" Width="180" Click="returnToLogIn"/>
+        </StackPanel>
+        <StackPanel  x:Name="stackPanelProblems" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="383" Grid.RowSpan="2"/>
+
+    </Grid>
+</ui:FluentWindow>

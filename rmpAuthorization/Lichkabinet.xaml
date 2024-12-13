@@ -1,0 +1,60 @@
+﻿<ui:FluentWindow x:Class="rmpAuthorization.Lichkabinet"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:rmpAuthorization"
+        mc:Ignorable="d"
+        Title="Lichkabinet" Height="600" Width="800"
+                 >
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <LinearGradientBrush.RelativeTransform>
+                    <TransformGroup>
+                        <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                        <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                        <RotateTransform Angle="243.55800000000002" CenterX="0.5" CenterY="0.5"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </LinearGradientBrush.RelativeTransform>
+                <GradientStop Color="#FFE41DFC"/>
+                <GradientStop Color="#FFF78F13" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="192*"/>
+
+        </Grid.RowDefinitions>
+        <ui:TitleBar Title="Личный кабинет" CloseClicked="TitleBar_CloseClicked"/>
+
+        <StackPanel MinWidth="350" HorizontalAlignment="Left" Grid.Row="1">
+
+            <Label Content="Электронная почта" />
+            <ui:TextBox x:Name="tboxGmail"  PreviewKeyDown="previewKeyDown" CommandManager.PreviewCanExecute="tboxName_PreviewCanExecute" PreviewTextInput="tboxGmail_PreviewTextInput" MaxLength="50" BorderBrush="Black"  />
+            <Label Content="Логин"/>
+            <ui:TextBox x:Name="tboxLogin" PreviewKeyDown="previewKeyDown" PreviewTextInput="tboxGmail_PreviewTextInput" CommandManager.PreviewCanExecute="tboxName_PreviewCanExecute" BorderBrush="Black" MaxLength="50"  />
+
+            <Label Content="Пароль"/>
+            <ui:PasswordBox x:Name="tboxPassword" PreviewTextInput="tboxGmail_PreviewTextInput" CommandManager.PreviewCanExecute="tboxName_PreviewCanExecute" BorderBrush="Black" MaxLength="50"  />
+
+            <Label Content="Новый пароль"/>
+            <ui:PasswordBox x:Name="tboxPasswordNew" PreviewTextInput="tboxGmail_PreviewTextInput" CommandManager.PreviewCanExecute="tboxName_PreviewCanExecute" BorderBrush="Black" MaxLength="50"  />
+
+            <Label Content="Имя"/>
+            <ui:TextBox x:Name="tboxName" PreviewKeyDown="previewKeyDown" BorderBrush="Black" MaxLength="50"  CommandManager.PreviewCanExecute="tboxName_PreviewCanExecute" ContextMenu="{x:Null}" PreviewTextInput="previewTextInput" />
+            <Label Content="Фамилия"/>
+            <ui:TextBox x:Name="tboxSurname" PreviewKeyDown="previewKeyDown" BorderBrush="Black" MaxLength="50"  CommandManager.PreviewCanExecute="tboxName_PreviewCanExecute"  PreviewTextInput="previewTextInput" />
+
+            <Label Content="Отчество"/>
+            <ui:TextBox x:Name="tboxMidName" PreviewKeyDown="previewKeyDown" MaxLength="50"   PreviewTextInput="previewTextInput" CommandManager.PreviewCanExecute="tboxName_PreviewCanExecute" BorderBrush="Black" />
+            <TextBlock></TextBlock>
+            <ui:Button HorizontalAlignment="Center" Content="Поменять данные" Click="change_data_Click" ></ui:Button>
+        </StackPanel>
+        <StackPanel  x:Name="stackPanelProblems" HorizontalAlignment="Right" VerticalAlignment="Bottom" MinWidth="400" MinHeight="500" Grid.Row="1"/>
+
+    </Grid>
+</ui:FluentWindow>

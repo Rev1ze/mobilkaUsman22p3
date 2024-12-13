@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "dgSpecHash": "nFcp95nPm6dbE9MKdvjIk1nPDoYpRnn77QXj7PZlWJiRtlzFFmHY796uFWhq/gzzRsEn4HeDpZAxxLK9QvVZiw==",
+  "success": true,
+  "projectFilePath": "C:\\sharpAuthoriz\\rmpAuthorization\\rmpAuthorization.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\easycaptcha.wpf\\0.9.0.3\\easycaptcha.wpf.0.9.0.3.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\system.data.datasetextensions\\4.5.0\\system.data.datasetextensions.4.5.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\wpf-ui\\3.0.5\\wpf-ui.3.0.5.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Пакет \"EasyCaptcha.Wpf 0.9.0.3\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\", а не целевой платформы проекта \"net8.0-windows7.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "libraryId": "EasyCaptcha.Wpf",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    }
+  ]
+}

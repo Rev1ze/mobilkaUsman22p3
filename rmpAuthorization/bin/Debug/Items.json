@@ -1,0 +1,50 @@
+[
+  {
+    "id": 100,
+    "name": "Шкаф крутой",
+    "category": "Для зала",
+    "price": 3500.0,
+    "rating": 4.5,
+    "pathToPng": "None"
+  },
+  {
+    "id": 104,
+    "name": "Диван",
+    "category": "Для зала",
+    "price": 6600.0,
+    "rating": 4.8,
+    "pathToPng": "None"
+  },
+  {
+    "id": 103,
+    "name": "Стеллаж",
+    "category": "Для спальни",
+    "price": 1200.0,
+    "rating": 3.4,
+    "pathToPng": "C:\\Users\\user\\Downloads\\lemana_no_text_no_phone.png"
+  },
+  {
+    "id": 101,
+    "name": "Крутая вешалка",
+    "category": "Для прихожей",
+    "price": 1600.0,
+    "rating": 4.6,
+    "pathToPng": "C:\\Users\\user\\Downloads\\crown.png"
+  },
+  {
+    "id": 102,
+    "name": "Тумба",
+    "category": "Для спальни",
+    "price": 900.0,
+    "rating": 3.9,
+    "pathToPng": "C:\\Users\\user\\Downloads\\lemana_no_text_no_phone.png"
+  },
+  {
+    "id": 105,
+    "name": "32GDDDD",
+    "category": "Для прихожей",
+    "price": 1.0,
+    "rating": 0.0,
+    "pathToPng": "None"
+  }
+]
