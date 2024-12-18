@@ -85,7 +85,6 @@ namespace rmpAuthorization
             if (g.IsMatch(tboxGmail.Text) == false || tboxGmail.Text.Contains("..") || tboxGmail.Text.StartsWith(".")
                 || !(tboxGmail.Text.Contains("@")) || (tboxGmail.Text.Split('@')[0].Any(x => char.IsLetter(x)) == false)
                 || !tboxGmail.Text.All(x => x == '.' || char.IsLetterOrDigit(x) || x == '@'))
-
             {
                 tblock.Text = "Неверная почта!";stackPanelProblems.Children.Add(tblock);return;
             }
@@ -150,7 +149,6 @@ namespace rmpAuthorization
                 if (response.IsSuccessStatusCode)
                 {
                     System.Windows.MessageBox.Show("Вы успешно зарегались");
-
                 }
             }
             catch (Exception)
